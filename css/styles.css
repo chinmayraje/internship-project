@@ -1,0 +1,45 @@
+/* Basic styles for the portal */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.landing-page, .login-page, .portal-page, .error-page {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.user-selection {
+    display: flex;
+    justify-content: center;
+}
+
+.user-btn {
+    margin: 10px;
+    padding: 15px;
+    background-color: #0056b3;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.user-btn:hover {
+    background-color: #004080;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

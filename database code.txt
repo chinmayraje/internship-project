@@ -1,0 +1,19 @@
+CREATE DATABASE institute_portal;
+
+USE institute_portal;
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    role ENUM('hod', 'admin', 'faculty', 'student') NOT NULL,
+    section ENUM('TYA', 'TYB', 'TYC') NULL, -- Only for students
+    courses_assigned BOOLEAN DEFAULT FALSE -- For students only
+);
+
+-- Sample data for testing
+INSERT INTO users (email, password, role, section, courses_assigned) 
+VALUES ('hod@somaiya.edu', PASSWORD('hod_password'), 'hod', NULL, FALSE),
+       ('admin@somaiya.edu', PASSWORD('admin_password'), 'admin', NULL, FALSE),
+       ('faculty@somaiya.edu', PASSWORD('faculty_password'), 'faculty', NULL, FALSE),
+       ('student1@somaiya.edu', PASSWORD('student_password'), 'student', 'TYA', TRUE);
